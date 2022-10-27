@@ -44,6 +44,27 @@ table {
 	border-spacing: 0;
 }
 
+/* 
+Defining font-family */
 body, button{
     font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: 
+    #F6C4C4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    margin: 1rem;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+#form{
+    display: none;
 }
