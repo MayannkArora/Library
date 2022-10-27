@@ -87,6 +87,18 @@ function addToCard(){
                 read_button.className='unread_normal';
             }
         })
+
+        remove.addEventListener('click',()=>{
+            let count = myLibrary[i];
+            myLibrary.splice(myLibrary[i].index,1);
+            // correcting the indexes for other elements
+            for(let i=count; i<=myLibrary.length-1; i++){
+                myLibrary[i].index-=1;
+            }
+            addToCard();
+            count--;
+        })
+
         //setting classes
         entry.classList.add('entry');
 
