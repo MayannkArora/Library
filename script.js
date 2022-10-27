@@ -1,4 +1,6 @@
-
+// Defining DOM elements
+let addBook=document.querySelector("#add");
+let form = document.querySelector('#form')
 
 // Defining empty array for books
 let myLibrary=[];
@@ -15,3 +17,8 @@ function Book(name,author,pages,read){
 function addBookToLibrary(value){
     myLibrary.push(value);
 }
+
+//Defining event listeners
+addBook.addEventListener('click',()=>{
+form.style.display='block';
+})
