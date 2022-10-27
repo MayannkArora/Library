@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project:Library</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1> Project: Library </h1>
+
+    <!-- Button to add book -->
+    <button id="add"> Add book </button>
+
+    <!-- Form for capturing user details -->
+    <div id="form">
+        <input type="text" id="book_name" placeholder="Enter Book Name"><br>
+        <input type="text" id="author_name" placeholder="Enter Author's Name"><br>
+        <input type="number" id="page_number" placeholder="100"><br>
+        Have you read the book?
+        <input type ='radio' id="read_yes" name="read_yes">
+        <label for="read_yes"> Yes </label>
+        <input type ='radio' id="read_no" name="read_no">
+        <label for="read_no"> No </label>
+    </div>
+
+    <!-- Card to display Book details and read status  -->
+    <div id="card"></div>
+</body>
+</html>
