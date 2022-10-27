@@ -42,7 +42,8 @@ function addToCard(){
     let unread_button = document.createElement('button');
     let remove = document.createElement('button');
     let buttonHolder = document.createElement('div')    
-    //
+
+    //defiinng text contents
     name.textContent= 'Book name: ';
     author.textContent='Author name: '
     pages.textContent="Pages: "
@@ -50,9 +51,44 @@ function addToCard(){
     unread_button.textContent='Unread'
     remove.textContent='Remove'
 
+    // adding book details
         name.textContent+=myLibrary[i].name;
         author.textContent+=myLibrary[i].author;
         pages.textContent+=myLibrary[i].pages;
+
+        // adding button functionalities
+        if(myLibrary[i].read=='read'){
+            read_button.classList.add('read_illuminated')
+        } else if (myLibrary[i].read=='unread'){
+            unread_button.classList.add('unread_illuminated');
+        }
+
+        //adding event listeners to read and unread button to change class
+        read_button.addEventListener('click',()=>{
+            if(read_button.classList=='read_illuminated'){
+                read_button.classList.remove('read_illuminated');
+                read_button.classList.add('read_normal');
+                unread_button.className='unread_normal';
+            } else {
+               
+                read_button.classList='read_illuminated';
+                unread_button.className='unread_normal';
+            }
+        })
+
+        unread_button.addEventListener('click',()=>{
+            if(unread_button.classList=='unread_illuminated'){
+                unread_button.classList.remove('unread_illuminated');
+                unread_button.classList.add('unread_normal');
+                read_button.className='unread_normal';
+            } else {
+                unread_button.classList.remove('unread_normal');
+                unread_button.classList.add('unread_illuminated');
+                read_button.className='unread_normal';
+            }
+        })
+        //setting classes
+        entry.classList.add('entry');
 
 
         //appending divs
