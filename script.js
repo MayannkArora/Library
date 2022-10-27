@@ -29,7 +29,7 @@ function addBookToLibrary(value){
 //function to add book details to card
 function addToCard(){
 
-   
+   card.textContent='';
 
     for(let i = 0; i < myLibrary.length; i++){
 
@@ -82,12 +82,13 @@ submit.addEventListener('click',()=>{
     addBookToLibrary(newBook);
 
     addToCard();
-    form.style.display='none';
     name='';
     author='';
     pages='';
     yes='';
     no='';
+    form.style.display='none';
+    
 })
 
 
