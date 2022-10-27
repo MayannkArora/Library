@@ -39,20 +39,30 @@ function addToCard(){
     let author = document.createElement('div');
     let pages = document.createElement('div');
     let read_button = document.createElement('button');
-    let unread_button = document.createDocumentFragment('button');
-
+    let unread_button = document.createElement('button');
+    let remove = document.createElement('button');
+    let buttonHolder = document.createElement('div')    
     //
     name.textContent= 'Book name: ';
     author.textContent='Author name: '
     pages.textContent="Pages: "
+    read_button.textContent='Read'
+    unread_button.textContent='Unread'
+    remove.textContent='Remove'
 
         name.textContent+=myLibrary[i].name;
         author.textContent+=myLibrary[i].author;
         pages.textContent+=myLibrary[i].pages;
 
+
+        //appending divs
+        buttonHolder.appendChild(read_button);
+        buttonHolder.appendChild(unread_button);
+        buttonHolder.appendChild(remove);
         entry.appendChild(name);
         entry.appendChild(author);
         entry.appendChild(pages);
+        entry.appendChild(buttonHolder);
 
         card.appendChild(entry);
         
