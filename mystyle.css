@@ -67,4 +67,9 @@ body{
 
 #form{
     display: none;
+	flex-direction: column;
+}
+
+#card{
+	display: flex;
 }
